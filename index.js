@@ -4,10 +4,7 @@ const predictRoute = require("./routes/predictRoute");
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-   origin: 'https://pcos.vercel.app/',
-    methods: ['GET', 'POST',"PUT","DELETE"] 
-}));
+app.use(cors());
 
 // Use prediction routes
 app.use("/predict", predictRoute);
